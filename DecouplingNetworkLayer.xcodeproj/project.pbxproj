@@ -18,6 +18,8 @@
 		AC0AD028287A328B00469864 /* DogFactsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD027287A328B00469864 /* DogFactsEnvironment.swift */; };
 		AC0AD02A287A32C700469864 /* DogFactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD029287A32C700469864 /* DogFactsAPI.swift */; };
 		AC0AD02C287A32E600469864 /* DogFactsAPI+MappingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD02B287A32E600469864 /* DogFactsAPI+MappingExtension.swift */; };
+		AC0AD02E287A39C200469864 /* DogFactsAPI+EnvironmentInstancesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD02D287A39C200469864 /* DogFactsAPI+EnvironmentInstancesExtension.swift */; };
+		AC0AD030287A3FEC00469864 /* DogFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */; };
 		AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6102287A1773006AEFD0 /* AppDelegate.swift */; };
 		AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */; };
 		AC0B6107287A1773006AEFD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6106287A1773006AEFD0 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		AC0AD027287A328B00469864 /* DogFactsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsEnvironment.swift; sourceTree = "<group>"; };
 		AC0AD029287A32C700469864 /* DogFactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsAPI.swift; sourceTree = "<group>"; };
 		AC0AD02B287A32E600469864 /* DogFactsAPI+MappingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogFactsAPI+MappingExtension.swift"; sourceTree = "<group>"; };
+		AC0AD02D287A39C200469864 /* DogFactsAPI+EnvironmentInstancesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogFactsAPI+EnvironmentInstancesExtension.swift"; sourceTree = "<group>"; };
+		AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsViewModel.swift; sourceTree = "<group>"; };
 		AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecouplingNetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0B6102287A1773006AEFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 				AC0AD027287A328B00469864 /* DogFactsEnvironment.swift */,
 				AC0AD029287A32C700469864 /* DogFactsAPI.swift */,
 				AC0AD02B287A32E600469864 /* DogFactsAPI+MappingExtension.swift */,
+				AC0AD02D287A39C200469864 /* DogFactsAPI+EnvironmentInstancesExtension.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -138,15 +143,16 @@
 		AC0B6101287A1773006AEFD0 /* DecouplingNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				AC0AD01A287A1E2A00469864 /* Networking */,
-				AC0AD011287A1BEF00469864 /* DogFacts */,
 				AC0B6102287A1773006AEFD0 /* AppDelegate.swift */,
+				AC0B610B287A1776006AEFD0 /* Assets.xcassets */,
+				AC0AD011287A1BEF00469864 /* DogFacts */,
+				AC0AD02F287A3FEC00469864 /* DogFactsViewModel.swift */,
+				AC0B6110287A1776006AEFD0 /* Info.plist */,
+				AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */,
+				AC0B6108287A1773006AEFD0 /* Main.storyboard */,
+				AC0AD01A287A1E2A00469864 /* Networking */,
 				AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */,
 				AC0B6106287A1773006AEFD0 /* ViewController.swift */,
-				AC0B6108287A1773006AEFD0 /* Main.storyboard */,
-				AC0B610B287A1776006AEFD0 /* Assets.xcassets */,
-				AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */,
-				AC0B6110287A1776006AEFD0 /* Info.plist */,
 			);
 			path = DecouplingNetworkLayer;
 			sourceTree = "<group>";
@@ -234,12 +240,14 @@
 				AC0AD026287A325900469864 /* Environment.swift in Sources */,
 				AC0AD017287A1DA100469864 /* DogFactError.swift in Sources */,
 				AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */,
+				AC0AD02E287A39C200469864 /* DogFactsAPI+EnvironmentInstancesExtension.swift in Sources */,
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* DogFactDTO.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DogFactsRemoteRepository.swift in Sources */,
 				AC0AD02A287A32C700469864 /* DogFactsAPI.swift in Sources */,
 				AC0AD028287A328B00469864 /* DogFactsEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */,
+				AC0AD030287A3FEC00469864 /* DogFactsViewModel.swift in Sources */,
 				AC0AD013287A1C0000469864 /* DogFactsRepository.swift in Sources */,
 				AC0AD01F287A2B3400469864 /* URLSessionHTTPClientError.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,

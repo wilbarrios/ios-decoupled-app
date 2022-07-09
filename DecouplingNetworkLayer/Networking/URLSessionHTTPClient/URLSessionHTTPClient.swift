@@ -17,7 +17,7 @@ public final class URLSessionHTTPClient: HTTPClient {
       case .failure(let _error):
         responseHandler(.failure(_error))
       }
-    }
+    }.resume()
   }
 }
 
