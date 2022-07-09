@@ -15,6 +15,14 @@ final class DogFactsViewModel {
   }
   
   func load() {
+    fetch()
+  }
+  
+  func fetchAnotherFact() {
+    fetch()
+  }
+  
+  private func fetch() {
     repository.getRandomFact { [unowned self] result in
       switch result {
       case .success(let factData):

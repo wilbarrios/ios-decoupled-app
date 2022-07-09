@@ -25,6 +25,8 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var factLabel: UILabel!
   
+  // MARK: - Initialization
+  
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     commonInit()
@@ -42,6 +44,14 @@ class ViewController: UIViewController {
       onError: onError(errorMessage:)
     )
   }
+  
+  // MARK: - User interaction
+  
+  @IBAction func fetchFactHandler(_ sender: Any) {
+    viewModel.fetchAnotherFact()
+  }
+  
+  // MARK: - VC Life cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()

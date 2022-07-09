@@ -22,11 +22,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs6-hW-8dd">
+                                <rect key="frame" x="135.5" y="811" width="143" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Fetch another fact"/>
+                                <connections>
+                                    <action selector="fetchFactHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efb-wA-oz4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Cs6-hW-8dd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Un-vH-rbk"/>
                             <constraint firstItem="wap-5u-fhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7CN-qb-f65"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cs6-hW-8dd" secondAttribute="bottom" constant="20" id="dt4-nD-f3I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wap-5u-fhp" secondAttribute="trailing" constant="20" id="jEe-Im-N0x"/>
                             <constraint firstItem="wap-5u-fhp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m7m-uN-u0y"/>
                             <constraint firstItem="wap-5u-fhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mGy-iH-PjL"/>

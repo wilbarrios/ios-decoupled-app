@@ -1,5 +1,3 @@
-import Foundation
-
 struct DogFactsAPI {
   let environment: Environment
   
