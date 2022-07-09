@@ -40,8 +40,8 @@ class ViewController: UIViewController {
   private func commonInit() {
     self.viewModel = makeViewModel(
       repository: makeRepository(),
-      onSuccess: onSuccess(factMessage:),
-      onError: onError(errorMessage:)
+      onSuccess: { [unowned self] in self.onSuccess(factMessage: $0) },
+      onError: { [unowned self] in self.onError(errorMessage: $0) }
     )
   }
   
