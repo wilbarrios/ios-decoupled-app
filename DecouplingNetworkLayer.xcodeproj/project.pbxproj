@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0AD013287A1C0000469864 /* DogFactsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD012287A1C0000469864 /* DogFactsRepository.swift */; };
+		AC0AD017287A1DA100469864 /* DogFactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD016287A1DA100469864 /* DogFactError.swift */; };
+		AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0AD018287A1DC700469864 /* DogFactData.swift */; };
 		AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6102287A1773006AEFD0 /* AppDelegate.swift */; };
 		AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */; };
 		AC0B6107287A1773006AEFD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6106287A1773006AEFD0 /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC0AD012287A1C0000469864 /* DogFactsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsRepository.swift; sourceTree = "<group>"; };
+		AC0AD016287A1DA100469864 /* DogFactError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactError.swift; sourceTree = "<group>"; };
+		AC0AD018287A1DC700469864 /* DogFactData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactData.swift; sourceTree = "<group>"; };
 		AC0B60FF287A1773006AEFD0 /* DecouplingNetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecouplingNetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC0B6102287A1773006AEFD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0AD011287A1BEF00469864 /* DogFacts */ = {
+			isa = PBXGroup;
+			children = (
+				AC0AD015287A1D9100469864 /* Errors */,
+				AC0AD014287A1D7F00469864 /* Model */,
+				AC0AD012287A1C0000469864 /* DogFactsRepository.swift */,
+			);
+			path = DogFacts;
+			sourceTree = "<group>";
+		};
+		AC0AD014287A1D7F00469864 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC0AD018287A1DC700469864 /* DogFactData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC0AD015287A1D9100469864 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				AC0AD016287A1DA100469864 /* DogFactError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		AC0B60F6287A1773006AEFD0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +90,7 @@
 		AC0B6101287A1773006AEFD0 /* DecouplingNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				AC0AD011287A1BEF00469864 /* DogFacts */,
 				AC0B6116287A1800006AEFD0 /* HTTPClient */,
 				AC0B6102287A1773006AEFD0 /* AppDelegate.swift */,
 				AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */,
@@ -150,7 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0B6107287A1773006AEFD0 /* ViewController.swift in Sources */,
+				AC0AD017287A1DA100469864 /* DogFactError.swift in Sources */,
 				AC0B6103287A1773006AEFD0 /* AppDelegate.swift in Sources */,
+				AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */,
+				AC0AD013287A1C0000469864 /* DogFactsRepository.swift in Sources */,
 				AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */,
 				AC0B6105287A1773006AEFD0 /* SceneDelegate.swift in Sources */,
 			);
