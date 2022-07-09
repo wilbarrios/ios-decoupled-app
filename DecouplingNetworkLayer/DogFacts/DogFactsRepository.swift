@@ -1,4 +1,4 @@
 protocol DogFactsRepository {
   typealias DogFactResult = Result<DogFactData, DogFactError>
-  func getRandomFact(handler: (DogFactResult) -> Void)
+  func getRandomFact(handler: @escaping (DogFactResult) -> Void)
 }
