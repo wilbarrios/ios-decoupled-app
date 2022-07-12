@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wap-5u-fhp">
-                                <rect key="frame" x="20" y="429.5" width="374" height="37"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs6-hW-8dd">
                                 <rect key="frame" x="135.5" y="811" width="143" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -30,28 +24,39 @@
                                     <action selector="fetchAnotherFactClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zu-mU-Co2"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading dog fact..." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYd-Hs-Upg">
+                                <rect key="frame" x="20" y="64" width="374" height="727"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Cs6-hW-8dd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Un-vH-rbk"/>
-                            <constraint firstItem="wap-5u-fhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7CN-qb-f65"/>
+                            <constraint firstItem="hYd-Hs-Upg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9FV-tG-cMc"/>
+                            <constraint firstItem="hYd-Hs-Upg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="F7z-op-zht"/>
+                            <constraint firstItem="Cs6-hW-8dd" firstAttribute="top" secondItem="hYd-Hs-Upg" secondAttribute="bottom" constant="20" id="Xcp-iz-K50"/>
+                            <constraint firstItem="hYd-Hs-Upg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZnB-w9-Wwg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cs6-hW-8dd" secondAttribute="bottom" constant="20" id="dt4-nD-f3I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wap-5u-fhp" secondAttribute="trailing" constant="20" id="jEe-Im-N0x"/>
-                            <constraint firstItem="wap-5u-fhp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m7m-uN-u0y"/>
-                            <constraint firstItem="wap-5u-fhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mGy-iH-PjL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hYd-Hs-Upg" secondAttribute="trailing" constant="20" id="ybP-gz-Nfv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="factLabel" destination="wap-5u-fhp" id="wmO-la-ejS"/>
+                        <outlet property="factTextView" destination="hYd-Hs-Upg" id="lxa-Ow-yyN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="117"/>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

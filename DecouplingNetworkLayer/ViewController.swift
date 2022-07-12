@@ -23,7 +23,7 @@ class ViewController: UIViewController {
   
   private var viewModel: DogFactsViewModel!
   
-  @IBOutlet weak var factLabel: UILabel!
+  @IBOutlet weak var factTextView: UITextView!
   
   // MARK: - Initialization
   
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 
   // MARK: - Binding
   func onSuccess(factMessage: String) {
-    factLabel.text = factMessage
+    factTextView.text = factMessage
     print(Self.self, #function, factMessage)
   }
   
