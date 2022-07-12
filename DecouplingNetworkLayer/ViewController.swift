@@ -47,8 +47,8 @@ class ViewController: UIViewController {
   
   // MARK: - User interaction
   
-  @IBAction func fetchFactHandler(_ sender: Any) {
-    viewModel.fetchAnotherFact()
+  @IBAction func fetchAnotherFactClicked(_ sender: Any) {
+    viewModel.onUserInput(.fetchFactClicked)
   }
   
   // MARK: - VC Life cycle
@@ -67,6 +67,12 @@ class ViewController: UIViewController {
   
   func onError(errorMessage: String) {
     print(Self.self, #function, errorMessage)
+  }
+}
+
+extension ViewController {
+  enum UserInput {
+    case fetchFactClicked
   }
 }
 

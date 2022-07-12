@@ -27,7 +27,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Fetch another fact"/>
                                 <connections>
-                                    <action selector="fetchFactHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efb-wA-oz4"/>
+                                    <action selector="fetchAnotherFactClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zu-mU-Co2"/>
                                 </connections>
                             </button>
                         </subviews>
