@@ -55,7 +55,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    viewModel.load()
+    viewModel.fetchRandomFact()
     print(Self.self, #function)
   }
 

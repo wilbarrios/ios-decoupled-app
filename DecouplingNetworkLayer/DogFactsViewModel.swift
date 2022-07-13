@@ -13,12 +13,8 @@ final class DogFactsViewModel {
     self.onSuccess = onSuccess
     self.onError = onError
   }
-  
-  func load() {
-    fetch()
-  }
-  
-  private func fetch() {
+
+  func fetchRandomFact() {
     repository.getRandomFact { [unowned self] result in
       switch result {
       case .success(let factData):
@@ -39,7 +35,7 @@ extension DogFactsViewModel {
   func onUserInput(_ input: ViewController.UserInput) {
     switch input {
     case .fetchFactClicked:
-      fetch()
+      fetchRandomFact()
     }
   }
 }
