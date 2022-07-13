@@ -45,13 +45,8 @@ final internal class DogFactsRemoteRepository: DogFactsRepository {
 
 fileprivate extension DogFactDTO {
   var toData: DogFactData {
-    guard
-      let _facts = facts,
-      let _success = success,
-      _success
-    else { return .empty }
     return DogFactData(
-      factMessage: _facts.reduce(into: "", { $0.append(contentsOf: $1) })
+      factMessage: facts.reduce(into: "", { $0.append(contentsOf: $1) })
     )
   }
 }
