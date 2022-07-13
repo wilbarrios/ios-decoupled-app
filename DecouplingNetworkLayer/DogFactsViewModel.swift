@@ -30,7 +30,12 @@ final class DogFactsViewModel {
   }
 }
 
+// MARK: - User interaction
 extension DogFactsViewModel {
+  enum UserInput {
+    case fetchFactIntent
+  }
+  
   func onUserInput(_ input: ViewController.UserInput) {
     switch input {
     case .fetchFactClicked:
