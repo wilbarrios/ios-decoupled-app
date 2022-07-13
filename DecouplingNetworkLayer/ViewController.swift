@@ -69,10 +69,3 @@ class ViewController: UIViewController {
     print(Self.self, #function, errorMessage)
   }
 }
-
-extension ViewController {
-  enum UserInput {
-    case fetchFactClicked
-  }
-}
-
