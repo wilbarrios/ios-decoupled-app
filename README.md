@@ -12,7 +12,7 @@ Hello and welcome! 👋 In this repository you'll find:
 
 All of these on a very simple feature: Fetch random Dog 🐕 facts.
 
-And is the base repository for my **first** [article](@medium_article_url), if you want to check it out, visit it and any feedback will be more than welcome! 🙌 and stay tuned 😉.
+And is the base repository for my [article](https://medium.com/@wil.barriost/ios-clean-architecture-my-way-on-a-very-simple-feature-mvvm-repository-urlsession-swift-678cfe4301f0), if you want to check it out, visit it and any feedback will be more than welcome! 🙌 and stay tuned 😉.
 
 ## Result app
 
