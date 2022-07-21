@@ -27,6 +27,7 @@
 		AC0B610C287A1776006AEFD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC0B610B287A1776006AEFD0 /* Assets.xcassets */; };
 		AC0B610F287A1776006AEFD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B610D287A1776006AEFD0 /* LaunchScreen.storyboard */; };
 		AC0B6119287A1819006AEFD0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B6118287A1819006AEFD0 /* HTTPClient.swift */; };
+		AC2F1D63288996E6005A2D9C /* DogFactsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2F1D62288996E6005A2D9C /* DogFactsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		AC0B610E287A1776006AEFD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC0B6110287A1776006AEFD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC0B6118287A1819006AEFD0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		AC2F1D62288996E6005A2D9C /* DogFactsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFactsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				AC0AD01A287A1E2A00469864 /* Networking */,
 				AC0B6104287A1773006AEFD0 /* SceneDelegate.swift */,
 				AC0B6106287A1773006AEFD0 /* ViewController.swift */,
+				AC2F1D62288996E6005A2D9C /* DogFactsBuilder.swift */,
 			);
 			path = DecouplingNetworkLayer;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				AC0AD01D287A1E4900469864 /* URLSessionHTTPClient.swift in Sources */,
 				AC0AD023287A2C7F00469864 /* DogFactDTO.swift in Sources */,
 				AC0AD021287A2BBD00469864 /* DogFactsRemoteRepository.swift in Sources */,
+				AC2F1D63288996E6005A2D9C /* DogFactsBuilder.swift in Sources */,
 				AC0AD02A287A32C700469864 /* DogFactsAPI.swift in Sources */,
 				AC0AD028287A328B00469864 /* DogFactsEnvironment.swift in Sources */,
 				AC0AD019287A1DC700469864 /* DogFactData.swift in Sources */,
