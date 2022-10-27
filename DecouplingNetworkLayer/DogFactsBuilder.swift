@@ -38,7 +38,7 @@ fileprivate extension DogFactsBuilder {
 
 // MARK: - Storyboard factory helpers
 fileprivate extension DogFactsBuilder {
-  private var bundle: Bundle { Bundle(for: Self.self) }
+  private static var bundle: Bundle { Bundle(for: Self.self) }
     
   func instantiateViewController<T>(_ viewController: DogFactsUI.ViewController, on storyboard: DogFactsUI.Storyboard, as type: T.Type) -> T? {
     instantiateViewController(
@@ -49,7 +49,7 @@ fileprivate extension DogFactsBuilder {
     ) as? T
   }
   
-  private func instantiateStoryboard(name: String) -> UIStoryboard {
+  private func instantiateStoryboard(name: String, bundle: Bundle = bundle) -> UIStoryboard {
     UIStoryboard(name: name, bundle: bundle)
   }
   
