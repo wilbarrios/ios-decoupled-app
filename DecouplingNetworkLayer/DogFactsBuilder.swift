@@ -8,9 +8,9 @@ final class DogFactsBuilder {
   
   func buildRoot() -> UIViewController? {
     let viewController = instantiateViewController(
-      identifier: DogFactsUI.ViewController.root.rawValue,
-      storyboard: instantiateStoryboard(name: DogFactsUI.Storyboard.main.rawValue)
-    ) as? DogFactViewController
+      .root, on: .main,
+      as: DogFactViewController.self
+    )
     
     let viewModel = makeViewModel(
       repository: makeRepository(environment: environment),
@@ -31,7 +31,7 @@ fileprivate extension DogFactsBuilder {
     }
     
     enum ViewController: String {
-      case root = "ViewController"
+      case root = "DogFactViewController"
     }
   }
 }
@@ -39,12 +39,21 @@ fileprivate extension DogFactsBuilder {
 // MARK: - Storyboard factory helpers
 fileprivate extension DogFactsBuilder {
   private var bundle: Bundle { Bundle(for: Self.self) }
+    
+  func instantiateViewController<T>(_ viewController: DogFactsUI.ViewController, on storyboard: DogFactsUI.Storyboard, as type: T.Type) -> T? {
+    instantiateViewController(
+      identifier: viewController.rawValue,
+      storyboard: instantiateStoryboard(
+        name: storyboard.rawValue
+      )
+    ) as? T
+  }
   
-  func instantiateStoryboard(name: String) -> UIStoryboard {
+  private func instantiateStoryboard(name: String) -> UIStoryboard {
     UIStoryboard(name: name, bundle: bundle)
   }
   
-  func instantiateViewController(identifier: String, storyboard: UIStoryboard) -> UIViewController {
+  private func instantiateViewController(identifier: String, storyboard: UIStoryboard) -> UIViewController {
     storyboard.instantiateViewController(withIdentifier: identifier)
   }
 }
