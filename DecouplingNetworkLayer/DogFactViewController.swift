@@ -1,6 +1,6 @@
 import UIKit
 
-final class ViewController: UIViewController {
+final class DogFactViewController: UIViewController {
   
   var viewModel: DogFactsViewModel!
   

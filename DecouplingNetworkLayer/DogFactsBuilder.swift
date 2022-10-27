@@ -10,7 +10,7 @@ final class DogFactsBuilder {
     let viewController = instantiateViewController(
       identifier: DogFactsUI.ViewController.root.rawValue,
       storyboard: instantiateStoryboard(name: DogFactsUI.Storyboard.main.rawValue)
-    ) as? ViewController
+    ) as? DogFactViewController
     
     let viewModel = makeViewModel(
       repository: makeRepository(environment: environment),
