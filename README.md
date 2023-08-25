@@ -16,6 +16,10 @@ Prior article: [iOS Clean architecture? My way on a very simple feature [MVVM, R
 
 - [Architecture Doc 🛠🏗](./docs/ARCHITECTURE/README.md)
 
+## Documentation
+
+- [Architecture Doc 🛠🏗](./docs/ARCHITECTURE/README.md)
+
 ## Result app
 
 ![Dog facts app](./gif/DOG_FACTS.gif)
