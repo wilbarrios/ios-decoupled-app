@@ -13,7 +13,10 @@ final class DogFactsBuilder {
     )
     
     let viewModel = makeViewModel(
-      repository: makeRepository(environment: environment),
+      repository: 
+        makeRepository(environment: environment)
+          .loadDecorated()
+      ,
       onSuccess: { [weak viewController] in viewController?.onSuccess(factMessage: $0) },
       onError: { [weak viewController] in viewController?.onError(errorMessage: $0) }
     )
@@ -76,6 +79,52 @@ fileprivate extension DogFactsBuilder {
       repository: repository,
       onSuccess: onSuccess,
       onError: onError
+    )
+  }
+}
+
+enum LoadState {
+  case loading, idle
+}
+
+protocol LoaderView {
+  func setLoadState(_ state: LoadState)
+}
+
+final class LoaderViewDecorator<T> {
+  private let decoratee: T
+  private let loaderView: LoaderView
+  
+  init(
+    decoratee: T,
+    loaderView: LoaderView
+  ) {
+    self.decoratee = decoratee
+    self.loaderView = loaderView
+  }
+}
+
+extension LoaderViewDecorator: DogFactsRepository where T: DogFactsRepository {
+  func getRandomFact(handler: @escaping (DogFactResult) -> Void) {
+    loaderView.setLoadState(.loading)
+    decoratee.getRandomFact(handler: { [weak self] result in
+      self?.loaderView.setLoadState(.idle)
+      handler(result)
+    })
+  }
+}
+
+final class LoaderViewSpy: LoaderView {
+  func setLoadState(_ state: LoadState) {
+    print(Self.self, #function, state)
+  }
+}
+
+extension DogFactsRepository {
+  func loadDecorated() -> DogFactsRepository {
+    return LoaderViewDecorator(
+      decoratee: self,
+      loaderView: LoaderViewSpy()
     )
   }
 }
